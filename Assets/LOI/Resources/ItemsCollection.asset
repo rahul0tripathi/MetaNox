@@ -1,0 +1,393 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e92817ef77bdd40e787530a94b61cfad, type: 3}
+  m_Name: ItemsCollection
+  m_EditorClassIdentifier: 
+  list:
+  - id: 3823
+    name: Builder
+    thumb: {fileID: 0}
+    gridSize: 1
+    configuration:
+      buildTime: 0
+      isCharacter: 1
+      speed: 5
+      attackRange: 0
+      defenceRange: 0
+      healthPoints: 0
+      hitPoints: 0
+      productionRate: 0
+      product: 
+    idleSprites: a8020000eb010000
+    walkSprites: a8020000e6000000
+    attackSprites: a8020000bc010000
+    destroyedSprites: 
+  - id: 8833
+    name: Barrack
+    thumb: {fileID: 2800000, guid: 0816dd0b6ccc748e398158547278964a, type: 3}
+    gridSize: 3
+    configuration:
+      buildTime: 15
+      isCharacter: 0
+      speed: 0
+      attackRange: 0
+      defenceRange: 0
+      healthPoints: 500
+      hitPoints: 0
+      productionRate: 0
+      product: 
+    idleSprites: 7a00000053010000a7020000
+    walkSprites: 
+    attackSprites: 
+    destroyedSprites: a702000041030000
+  - id: 6871
+    name: Boat
+    thumb: {fileID: 2800000, guid: e602c8186a6a4478d8fd9d4a18eddf95, type: 3}
+    gridSize: 1
+    configuration:
+      buildTime: 15
+      isCharacter: 0
+      speed: 0
+      attackRange: 0
+      defenceRange: 0
+      healthPoints: 100
+      hitPoints: 0
+      productionRate: 0
+      product: 
+    idleSprites: e8000000
+    walkSprites: 
+    attackSprites: 
+    destroyedSprites: 
+  - id: 3635
+    name: BuilderHut
+    thumb: {fileID: 2800000, guid: 9b362156b32c8490991730fce97a3135, type: 3}
+    gridSize: 3
+    configuration:
+      buildTime: 0
+      isCharacter: 0
+      speed: 0
+      attackRange: 0
+      defenceRange: 0
+      healthPoints: 400
+      hitPoints: 0
+      productionRate: 0
+      product: 
+    idleSprites: a7020000e700000053010000
+    walkSprites: 
+    attackSprites: 
+    destroyedSprites: a702000041030000
+  - id: 2728
+    name: ArmyCamp
+    thumb: {fileID: 2800000, guid: 24281285aa89e48b5beb700038ac4517, type: 3}
+    gridSize: 3
+    configuration:
+      buildTime: 15
+      isCharacter: 0
+      speed: 0
+      attackRange: 0
+      defenceRange: 0
+      healthPoints: 400
+      hitPoints: 0
+      productionRate: 0
+      product: 
+    idleSprites: a7020000db030000
+    walkSprites: 
+    attackSprites: 
+    destroyedSprites: a702000041030000
+  - id: 1712
+    name: Cannon
+    thumb: {fileID: 2800000, guid: 0cebb485fc10049249571e2831af9294, type: 3}
+    gridSize: 3
+    configuration:
+      buildTime: 15
+      isCharacter: 0
+      speed: 0
+      attackRange: 0
+      defenceRange: 0
+      healthPoints: 30
+      hitPoints: 0
+      productionRate: 0
+      product: 
+    idleSprites: a7020000e9000000
+    walkSprites: 
+    attackSprites: 
+    destroyedSprites: a702000041030000
+  - id: 4856
+    name: ElixirCollector
+    thumb: {fileID: 2800000, guid: 74992e226f4234e7ab4a141db866fdca, type: 3}
+    gridSize: 3
+    configuration:
+      buildTime: 15
+      isCharacter: 0
+      speed: 0
+      attackRange: 0
+      defenceRange: 0
+      healthPoints: 300
+      hitPoints: 0
+      productionRate: 200
+      product: elixir
+    idleSprites: a7020000ea00000053010000
+    walkSprites: 
+    attackSprites: 
+    destroyedSprites: a702000041030000
+  - id: 2090
+    name: ElixirStorage
+    thumb: {fileID: 2800000, guid: e152cb780ed644a238901e9bba9f68ab, type: 3}
+    gridSize: 3
+    configuration:
+      buildTime: 15
+      isCharacter: 0
+      speed: 0
+      attackRange: 0
+      defenceRange: 0
+      healthPoints: 300
+      hitPoints: 0
+      productionRate: 0
+      product: 
+    idleSprites: a7020000eb00000053010000
+    walkSprites: 
+    attackSprites: 
+    destroyedSprites: a702000041030000
+  - id: 3336
+    name: GemBox
+    thumb: {fileID: 2800000, guid: 3cb98d18cda6b44748948532ea0897da, type: 3}
+    gridSize: 1
+    configuration:
+      buildTime: 15
+      isCharacter: 0
+      speed: 0
+      attackRange: 0
+      defenceRange: 0
+      healthPoints: 30
+      hitPoints: 0
+      productionRate: 0
+      product: 
+    idleSprites: ec000000
+    walkSprites: 
+    attackSprites: 
+    destroyedSprites: 
+  - id: 3265
+    name: GoldMine
+    thumb: {fileID: 2800000, guid: cf4ca475dc8db4e7ca23e08021e5e988, type: 3}
+    gridSize: 3
+    configuration:
+      buildTime: 15
+      isCharacter: 0
+      speed: 0
+      attackRange: 0
+      defenceRange: 0
+      healthPoints: 300
+      hitPoints: 0
+      productionRate: 300
+      product: gold
+    idleSprites: a7020000ed00000053010000
+    walkSprites: 
+    attackSprites: 
+    destroyedSprites: a702000041030000
+  - id: 9074
+    name: GoldStorage
+    thumb: {fileID: 2800000, guid: e0267bf57728c43ffb6d104f09592ba1, type: 3}
+    gridSize: 3
+    configuration:
+      buildTime: 15
+      isCharacter: 0
+      speed: 0
+      attackRange: 0
+      defenceRange: 0
+      healthPoints: 300
+      hitPoints: 0
+      productionRate: 0
+      product: 
+    idleSprites: a7020000ee00000053010000
+    walkSprites: 
+    attackSprites: 
+    destroyedSprites: a702000041030000
+  - id: 6704
+    name: SwordMan
+    thumb: {fileID: 0}
+    gridSize: 1
+    configuration:
+      buildTime: 10
+      isCharacter: 1
+      speed: 3
+      attackRange: 2
+      defenceRange: 0
+      healthPoints: 30
+      hitPoints: 15
+      productionRate: 0
+      product: 
+    idleSprites: a8020000ef000000
+    walkSprites: a802000037020000
+    attackSprites: a8020000e1030000
+    destroyedSprites: a8020000cf010000
+  - id: 4764
+    name: Tower
+    thumb: {fileID: 2800000, guid: 11361f6c487624448ab3931a680e82cf, type: 3}
+    gridSize: 3
+    configuration:
+      buildTime: 15
+      isCharacter: 0
+      speed: 0
+      attackRange: 0
+      defenceRange: 5
+      healthPoints: 300
+      hitPoints: 20
+      productionRate: 0
+      product: 
+    idleSprites: a70200005301000038020000
+    walkSprites: a70200003802000053010000
+    attackSprites: a70200003802000053010000
+    destroyedSprites: a702000041030000
+  - id: 2496
+    name: TownCenter
+    thumb: {fileID: 2800000, guid: 9e5566e678da14dc2b8db939bdec0478, type: 3}
+    gridSize: 4
+    configuration:
+      buildTime: 0
+      isCharacter: 0
+      speed: 0
+      attackRange: 0
+      defenceRange: 0
+      healthPoints: 600
+      hitPoints: 0
+      productionRate: 0
+      product: 
+    idleSprites: 3902000009030000ae010000
+    walkSprites: 
+    attackSprites: 
+    destroyedSprites: a702000041030000
+  - id: 2949
+    name: Tree1
+    thumb: {fileID: 0}
+    gridSize: 1
+    configuration:
+      buildTime: 0
+      isCharacter: 0
+      speed: 0
+      attackRange: 0
+      defenceRange: 0
+      healthPoints: 100
+      hitPoints: 0
+      productionRate: 0
+      product: 
+    idleSprites: a4020000
+    walkSprites: 
+    attackSprites: 
+    destroyedSprites: 
+  - id: 1251
+    name: Tree2
+    thumb: {fileID: 2800000, guid: 7f52a0d7894d54e77bb1c25059c773f2, type: 3}
+    gridSize: 1
+    configuration:
+      buildTime: 0
+      isCharacter: 0
+      speed: 0
+      attackRange: 0
+      defenceRange: 0
+      healthPoints: 100
+      hitPoints: 0
+      productionRate: 0
+      product: 
+    idleSprites: a5020000
+    walkSprites: 
+    attackSprites: 
+    destroyedSprites: 
+  - id: 6677
+    name: WindMill
+    thumb: {fileID: 2800000, guid: a65ee4e6feb8b4dbdb3398a8c1a2e0ad, type: 3}
+    gridSize: 3
+    configuration:
+      buildTime: 0
+      isCharacter: 0
+      speed: 0
+      attackRange: 0
+      defenceRange: 0
+      healthPoints: 300
+      hitPoints: 0
+      productionRate: 0
+      product: 
+    idleSprites: a7020000a602000053010000
+    walkSprites: 
+    attackSprites: 
+    destroyedSprites: a702000041030000
+  - id: 5492
+    name: Archer
+    thumb: {fileID: 0}
+    gridSize: 1
+    configuration:
+      buildTime: 10
+      isCharacter: 1
+      speed: 4
+      attackRange: 6
+      defenceRange: 0
+      healthPoints: 40
+      hitPoints: 20
+      productionRate: 0
+      product: 
+    idleSprites: a8020000e3030000
+    walkSprites: a80200002b030000
+    attackSprites: a8020000cd030000
+    destroyedSprites: a8020000cf010000
+  - id: 1502
+    name: ArcherTower
+    thumb: {fileID: 0}
+    gridSize: 1
+    configuration:
+      buildTime: 0
+      isCharacter: 1
+      speed: 0
+      attackRange: 0
+      defenceRange: 0
+      healthPoints: 0
+      hitPoints: 0
+      productionRate: 0
+      product: 
+    idleSprites: a8020000e3030000
+    walkSprites: a80200002b030000
+    attackSprites: a8020000cd030000
+    destroyedSprites: 
+  - id: 7666
+    name: Wall
+    thumb: {fileID: 2800000, guid: 71964cee2744c4897959828431d40578, type: 3}
+    gridSize: 1
+    configuration:
+      buildTime: 0
+      isCharacter: 0
+      speed: 0
+      attackRange: 0
+      defenceRange: 0
+      healthPoints: 100
+      hitPoints: 0
+      productionRate: 0
+      product: 
+    idleSprites: 8c000000
+    walkSprites: 
+    attackSprites: 
+    destroyedSprites: 
+  - id: 5341
+    name: Tree3
+    thumb: {fileID: 0}
+    gridSize: 1
+    configuration:
+      buildTime: 0
+      isCharacter: 0
+      speed: 0
+      attackRange: 0
+      defenceRange: 0
+      healthPoints: 0
+      hitPoints: 0
+      productionRate: 0
+      product: 
+    idleSprites: 70010000
+    walkSprites: 
+    attackSprites: 
+    destroyedSprites: 
