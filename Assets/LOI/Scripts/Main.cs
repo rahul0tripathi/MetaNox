@@ -96,8 +96,6 @@ public class Main : MonoBehaviour
             "{\"instanceId\":66286,\"itemId\":9074,\"posX\":20,\"posZ\":30}," +
             "{\"instanceId\":21809,\"itemId\":8833,\"posX\":23,\"posZ\":18}," +
             "{\"instanceId\":31911,\"itemId\":3265,\"posX\":18,\"posZ\":19}," +
-            "{\"instanceId\":63140,\"itemId\":7666,\"posX\":31,\"posZ\":23}," +
-            "{\"instanceId\":11908,\"itemId\":7666,\"posX\":1,\"posZ\":1}," +
             "{\"instanceId\":15113,\"itemId\":4856,\"posX\":15,\"posZ\":29}," +
             "{\"instanceId\":56078,\"itemId\":2949,\"posX\":41,\"posZ\":41}," +
             "{\"instanceId\":42821,\"itemId\":4764,\"posX\":30,\"posZ\":26}," +
@@ -140,29 +138,29 @@ public class Main : MonoBehaviour
             "{\"instanceId\":66682,\"itemId\":5341,\"posX\":31,\"posZ\":37}," +
             "{\"instanceId\":92946,\"itemId\":5341,\"posX\":27,\"posZ\":41},";
         //+
-        for (int i = 0; i < 43; i++)
+        for (int i = 0; i < 45; i++)
         {
 
 
-            _defaultSceneData += "{\"instanceId\":11908,\"itemId\":7666,\"posX\":1,\"posZ\":" + (i + 1).ToString() + "},";
+            _defaultSceneData += "{\"instanceId\":11908,\"itemId\":7666,\"posX\":0,\"posZ\":" + (i).ToString() + "},";
         }
-        for (int i = 0; i < 43; i++)
+        for (int i = 0; i < 45; i++)
         {
 
 
-            _defaultSceneData += "{\"instanceId\":11908,\"itemId\":7666,\"posX\":" + (i + 1).ToString() + ",\"posZ\":1},";
+            _defaultSceneData += "{\"instanceId\":11908,\"itemId\":7666,\"posX\":" + (i).ToString() + ",\"posZ\":0},";
         }
-        for (int i = 0; i < 43; i++)
+        for (int i = 0; i < 45; i++)
         {
 
 
-            _defaultSceneData += "{\"instanceId\":11908,\"itemId\":7666,\"posX\":44,\"posZ\":" + (i + 1).ToString() + "},";
+            _defaultSceneData += "{\"instanceId\":11908,\"itemId\":7666,\"posX\":44,\"posZ\":" + (i).ToString() + "},";
         }
-        for (int i = 0; i < 43; i++)
+        for (int i = 0; i < 45; i++)
         {
 
 
-            _defaultSceneData += "{\"instanceId\":11908,\"itemId\":7666,\"posX\":" + (i + 1).ToString() + ",\"posZ\":44},";
+            _defaultSceneData += "{\"instanceId\":11908,\"itemId\":7666,\"posX\":" + (i).ToString() + ",\"posZ\":44},";
         }
         _defaultSceneData += "{\"instanceId\":25391,\"itemId\":5341,\"posX\":24,\"posZ\":40}]}";
 
