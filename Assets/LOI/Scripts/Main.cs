@@ -2,6 +2,17 @@
 using System.Collections.Generic;
 using UnityEngine;
 using Random = UnityEngine.Random;
+
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
+using WalletConnectSharp.Core.Models;
+using WalletConnectSharp.Unity;
+using Moralis;
+using Assets;
+using MoralisWeb3ApiSdk;
+using Moralis.WebGL.Hex.HexTypes;
+using System.Numerics;
+
 [Serializable]
 public class ItemData
 {
@@ -67,6 +78,8 @@ public class Main : MonoBehaviour
     public GameObject RenderQuad;
     public Material RenderQuadMaterial;
     public GameObject ItemsContainer;
+    public MoralisController moralisController;
+    public GameObject qrMenu;
     private Dictionary<int, BaseItemScript> _itemInstances;
 
     private void Awake()
@@ -77,7 +90,19 @@ public class Main : MonoBehaviour
         //Sprites.LoadScriptableFromJSON();
         LoadScene();
     }
-
+    async public void Start()
+    {
+       // qrMenu.SetActive(false);
+        if (moralisController != null && moralisController)
+        {
+            await moralisController.Initialize();
+        }
+        else
+        {
+            // Moralis values not set or initialized.
+            Debug.LogError("The MoralisInterface has not been set up, please check you MoralisController in the scene.");
+        }
+    }
     // Update is called once per frame
     private void Update()
     {
@@ -196,5 +221,32 @@ public class Main : MonoBehaviour
     {
         var instanceId = Random.Range(10000, 99999);
         return instanceId;
+    }
+
+    public async void Play()
+    {
+        //AuthenticationButtonOff();
+
+        // If the user is still logged in just show game.
+        if (MoralisInterface.IsLoggedIn())
+        {
+            Debug.Log("User is already logged in to Moralis.");
+        }
+        // User is not logged in, depending on build target, begin wallect connection.
+        else
+        {
+            Debug.Log("User is not logged in.");
+        }
+        qrMenu.SetActive(true);
+
+    }
+    public async void WalletConnectHandler(WCSessionData data)
+    {
+        Debug.Log("Wallet connection received");
+        // Extract wallet address from the Wallet Connect Session data object.
+        string address = data.accounts[0].ToLower();
+        string appId = MoralisInterface.GetClient().ApplicationId;
+        Debug.Log(address);
+        Debug.Log(JsonUtility.ToJson(data));
     }
 }
