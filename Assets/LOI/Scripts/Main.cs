@@ -190,7 +190,7 @@ public class Main : MonoBehaviour
         instance.instanceId = instanceId;
 
         instance.SetItemData(itemId, posX, posZ);
-        instance.SetState(Common.State.IDLE);
+        instance.SetState(CommonHandler.State.IDLE);
 
 
     }

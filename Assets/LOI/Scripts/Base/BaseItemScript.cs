@@ -11,8 +11,8 @@ public class BaseItemScript : MonoBehaviour
 
 
     public int instanceId;
-    public Common.State state;
-    public Common.Direction direction;
+    public CommonHandler.State state;
+    public CommonHandler.Direction direction;
 
     public ItemsCollection.ItemData itemData;
     public float healthPoints;
@@ -23,7 +23,7 @@ public class BaseItemScript : MonoBehaviour
     public List<BaseItemScript> connectedItems;
 
 
-    private Dictionary<float, Common.Direction> _angleToDirectionMap;
+    private Dictionary<float, CommonHandler.Direction> _angleToDirectionMap;
 
 
     public UnityAction<BaseItemScript> OnItemDestroy;
@@ -31,15 +31,15 @@ public class BaseItemScript : MonoBehaviour
 
     private void Awake()
     {
-        _angleToDirectionMap = new Dictionary<float, Common.Direction>();
-        _angleToDirectionMap.Add(0, Common.Direction.BOTTOM_RIGHT);
-        _angleToDirectionMap.Add(51, Common.Direction.BOTTOM);
-        _angleToDirectionMap.Add(110, Common.Direction.BOTTOM_LEFT);
-        _angleToDirectionMap.Add(153, Common.Direction.LEFT);
-        _angleToDirectionMap.Add(190, Common.Direction.TOP_LEFT);
-        _angleToDirectionMap.Add(220, Common.Direction.TOP);
-        _angleToDirectionMap.Add(290, Common.Direction.TOP_RIGHT);
-        _angleToDirectionMap.Add(357, Common.Direction.RIGHT);
+        _angleToDirectionMap = new Dictionary<float, CommonHandler.Direction>();
+        _angleToDirectionMap.Add(0, CommonHandler.Direction.BOTTOM_RIGHT);
+        _angleToDirectionMap.Add(51, CommonHandler.Direction.BOTTOM);
+        _angleToDirectionMap.Add(110, CommonHandler.Direction.BOTTOM_LEFT);
+        _angleToDirectionMap.Add(153, CommonHandler.Direction.LEFT);
+        _angleToDirectionMap.Add(190, CommonHandler.Direction.TOP_LEFT);
+        _angleToDirectionMap.Add(220, CommonHandler.Direction.TOP);
+        _angleToDirectionMap.Add(290, CommonHandler.Direction.TOP_RIGHT);
+        _angleToDirectionMap.Add(357, CommonHandler.Direction.RIGHT);
     }
 
 
@@ -80,7 +80,7 @@ public class BaseItemScript : MonoBehaviour
     /// <param name="angle">Angle.</param>
     public void SetAngle(float angle)
     {
-        var direction = Common.Direction.BOTTOM_RIGHT;
+        var direction = CommonHandler.Direction.BOTTOM_RIGHT;
         float minAnge = 999;
         foreach (var entry in _angleToDirectionMap)
         {
@@ -99,7 +99,7 @@ public class BaseItemScript : MonoBehaviour
     ///     Sets the direction.
     /// </summary>
     /// <param name="direction">Direction.</param>
-    public void SetDirection(Common.Direction direction)
+    public void SetDirection(CommonHandler.Direction direction)
     {
         this.direction = direction;
         //this.UpdateConnectedItems();
@@ -109,7 +109,7 @@ public class BaseItemScript : MonoBehaviour
     ///     Sets the state.
     /// </summary>
     /// <param name="state">State.</param>
-    public void SetState(Common.State state)
+    public void SetState(CommonHandler.State state)
     {
         if (state != this.state)
             this.state = state;

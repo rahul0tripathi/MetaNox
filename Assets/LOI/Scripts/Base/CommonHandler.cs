@@ -1,4 +1,4 @@
-public class Common
+public class CommonHandler
 {
     public enum Direction
     {

@@ -68,7 +68,7 @@ public class SpriteCollection : ScriptableObject
         public string name;
 
         public int gridSize = 4;
-        public Common.RenderingLayer renderingLayer;
+        public CommonHandler.RenderingLayer renderingLayer;
         public int renderingOrder;
 
         public TextureData bottomTexture;
@@ -86,34 +86,34 @@ public class SpriteCollection : ScriptableObject
             topTexture = new TextureData(this);
         }
 
-        public TextureData GetTextureData(Common.Direction direction)
+        public TextureData GetTextureData(CommonHandler.Direction direction)
         {
             TextureData textureData = null;
             switch (direction)
             {
-                case Common.Direction.BOTTOM:
+                case CommonHandler.Direction.BOTTOM:
                     textureData = bottomTexture;
                     break;
-                case Common.Direction.BOTTOM_RIGHT:
+                case CommonHandler.Direction.BOTTOM_RIGHT:
                     textureData = bottomRightTexture;
                     break;
-                case Common.Direction.RIGHT:
+                case CommonHandler.Direction.RIGHT:
                     textureData = rightTexture;
                     break;
-                case Common.Direction.TOP_RIGHT:
+                case CommonHandler.Direction.TOP_RIGHT:
                     textureData = topRightTexture;
                     break;
-                case Common.Direction.TOP:
+                case CommonHandler.Direction.TOP:
                     textureData = topTexture;
                     break;
 
-                case Common.Direction.TOP_LEFT:
+                case CommonHandler.Direction.TOP_LEFT:
                     textureData = topRightTexture;
                     break;
-                case Common.Direction.LEFT:
+                case CommonHandler.Direction.LEFT:
                     textureData = rightTexture;
                     break;
-                case Common.Direction.BOTTOM_LEFT:
+                case CommonHandler.Direction.BOTTOM_LEFT:
                     textureData = bottomRightTexture;
                     break;
             }

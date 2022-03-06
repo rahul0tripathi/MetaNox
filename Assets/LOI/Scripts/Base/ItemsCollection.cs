@@ -69,21 +69,21 @@ public class ItemsCollection : ScriptableObject
             destroyedSprites = new List<int>();
         }
 
-        public void AddSprite(SpriteCollection.SpriteData sprite, Common.State state)
+        public void AddSprite(SpriteCollection.SpriteData sprite, CommonHandler.State state)
         {
             var sprites = idleSprites;
             switch (state)
             {
-                case Common.State.IDLE:
+                case CommonHandler.State.IDLE:
                     sprites = idleSprites;
                     break;
-                case Common.State.WALK:
+                case CommonHandler.State.WALK:
                     sprites = walkSprites;
                     break;
-                case Common.State.ATTACK:
+                case CommonHandler.State.ATTACK:
                     sprites = attackSprites;
                     break;
-                case Common.State.DESTROYED:
+                case CommonHandler.State.DESTROYED:
                     sprites = destroyedSprites;
                     break;
             }
@@ -91,21 +91,21 @@ public class ItemsCollection : ScriptableObject
             if (!sprites.Contains(sprite.id)) sprites.Add(sprite.id);
         }
 
-        public void RemoveSprite(SpriteCollection.SpriteData sprite, Common.State state)
+        public void RemoveSprite(SpriteCollection.SpriteData sprite, CommonHandler.State state)
         {
             var sprites = idleSprites;
             switch (state)
             {
-                case Common.State.IDLE:
+                case CommonHandler.State.IDLE:
                     sprites = idleSprites;
                     break;
-                case Common.State.WALK:
+                case CommonHandler.State.WALK:
                     sprites = walkSprites;
                     break;
-                case Common.State.ATTACK:
+                case CommonHandler.State.ATTACK:
                     sprites = attackSprites;
                     break;
-                case Common.State.DESTROYED:
+                case CommonHandler.State.DESTROYED:
                     sprites = destroyedSprites;
                     break;
             }
@@ -113,17 +113,17 @@ public class ItemsCollection : ScriptableObject
             if (sprites.Contains(sprite.id)) sprites.Remove(sprite.id);
         }
 
-        public List<int> GetSprites(Common.State state)
+        public List<int> GetSprites(CommonHandler.State state)
         {
             switch (state)
             {
-                case Common.State.IDLE:
+                case CommonHandler.State.IDLE:
                     return idleSprites;
-                case Common.State.WALK:
+                case CommonHandler.State.WALK:
                     return walkSprites;
-                case Common.State.ATTACK:
+                case CommonHandler.State.ATTACK:
                     return attackSprites;
-                case Common.State.DESTROYED:
+                case CommonHandler.State.DESTROYED:
                     return destroyedSprites;
             }
 

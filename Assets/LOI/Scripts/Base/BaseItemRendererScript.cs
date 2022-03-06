@@ -8,8 +8,8 @@ public class BaseItemRendererScript : MonoBehaviour
     public GameObject RenderQuadsContainer;
 
     private RendererQuad _groundPatch;
-    private Common.Direction _oldDirection = Common.Direction.BOTTOM;
-    private Common.State _oldState = Common.State.IDLE;
+    private CommonHandler.Direction _oldDirection = CommonHandler.Direction.BOTTOM;
+    private CommonHandler.State _oldState = CommonHandler.State.IDLE;
 
     /* private vars */
     private List<RendererQuad> _renderQuads;
@@ -53,8 +53,8 @@ public class BaseItemRendererScript : MonoBehaviour
         //flip renderer for topleft, bottomleft, left
         if (BaseItem.itemData.configuration.isCharacter)
         {
-            if (BaseItem.direction == Common.Direction.BOTTOM_LEFT || BaseItem.direction == Common.Direction.LEFT ||
-                BaseItem.direction == Common.Direction.TOP_LEFT)
+            if (BaseItem.direction == CommonHandler.Direction.BOTTOM_LEFT || BaseItem.direction == CommonHandler.Direction.LEFT ||
+                BaseItem.direction == CommonHandler.Direction.TOP_LEFT)
                 _FlipRenderers(true);
             else
                 _FlipRenderers(false);

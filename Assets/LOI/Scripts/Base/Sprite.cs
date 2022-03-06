@@ -50,7 +50,7 @@ public class Sprites
         return sprite;
     }
 
-    public static Material GetTextureMaterial(Texture2D texture, Common.RenderingLayer layer, int order)
+    public static Material GetTextureMaterial(Texture2D texture, CommonHandler.RenderingLayer layer, int order)
     {
         if (textureMaterialMap == null) textureMaterialMap = new Dictionary<Texture2D, Material>();
 
