@@ -84,6 +84,7 @@ public class Main : MonoBehaviour
 
     private void Awake()
     {
+        Screen.orientation = ScreenOrientation.LandscapeLeft;
         instance = this;
         Items.LoadItems();
         Sprites.LoadSprites();
