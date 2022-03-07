@@ -509,11 +509,11 @@ namespace MoralisWeb3ApiSdk
             // not supported by Web3API you will need to use the Wallet Connect method:
             // CreateProviderWithInfura(this WalletConnectProtocol protocol, string infruaId, string network = "mainnet", AuthenticationHeaderValue authenticationHeader = null)
             // We do not recommned this though
-            Web3Client = new Web3(client.CreateProvider( new DeadRpcReadClient((string s) => {
-                Debug.LogError(s);
-            })));
+            //Web3Client = new Web3(client.CreateProvider( new DeadRpcReadClient((string s) => {
+            //    Debug.LogError(s);
+            //})));
             //
-            //Web3Client = new Web3(client.CreateProvider(new Uri(rpcUrl)));
+           Web3Client = new Web3(client.CreateProvider(new Uri("https://rpc-mumbai.maticvigil.com")));
         }
 
         /// <summary>

@@ -348,7 +348,7 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1907105233831184, guid: b49d58e0c7e184c9580fc8dbf409a3a8, type: 3}
   m_PrefabInstance: {fileID: 171107751}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &383018953
+--- !u!114 &383018956
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -360,7 +360,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c3c62cd9067784d60bf2f1b0920a2df4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SignUp: {fileID: 383018949}
+  walletConnect: {fileID: 1325140535}
+  moralisController: {fileID: 1821011953}
+  qrMenu: {fileID: 383018949}
 --- !u!1001 &464387020
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -582,17 +584,6 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 224242121409059776, guid: 1d5ea933b88e947fe9be057044b7fd0d, type: 3}
   m_PrefabInstance: {fileID: 1042941377}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &966815253 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3516595543150052009, guid: f039b38886b2c4056adfcc1963267652, type: 3}
-  m_PrefabInstance: {fileID: 3516595543844203708}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8346744869c3d45a4bd41cba6807efca, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!224 &1018632967 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 224535164538889238, guid: 5a1c81eb361b2411dbf7194926caf3d1, type: 3}
@@ -1023,120 +1014,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f7711017b29064c8789bab3dcafa7563, type: 3}
---- !u!1 &1325140534
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1325140537}
-  - component: {fileID: 1325140536}
-  - component: {fileID: 1325140535}
-  m_Layer: 0
-  m_Name: WalletConnect
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1325140535
+--- !u!114 &1325140535 stripped
 MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 8117274317987743444, guid: ac2ce9a0f9c8149e1a03239fcef27ac0, type: 3}
+  m_PrefabInstance: {fileID: 8117274318908656867}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1325140534}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 801bffbf4c62cc244b55ea230d19649d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AllowedWalletIds: []
-  DefaultWallet: 1
-  autoSaveAndResume: 0
-  connectOnAwake: 0
-  connectOnStart: 1
-  createNewSessionOnSessionDisconnect: 1
-  connectSessionRetryCount: 3
-  customBridgeUrl: 
-  chainId: 1
-  ConnectedEvent:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 383018949}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  ConnectedEventSession:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 966815253}
-        m_TargetAssemblyTypeName: Main, Assembly-CSharp
-        m_MethodName: WalletConnectHandler
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  DisconnectedEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  ConnectionFailedEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  NewSessionConnected:
-    m_PersistentCalls:
-      m_Calls: []
-  ResumedSessionConnected:
-    m_PersistentCalls:
-      m_Calls: []
-  AppData:
-    Description: A sample application using Moralis
-    URL: https://www.moralis.io/
-    Icons:
-    - '"https://moralis.io/wp-content/uploads/2021/06/Powered-by-Moralis-Badge-Black.svg"'
-    Name: dasd
---- !u!114 &1325140536
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1325140534}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 17303ab972a16184e8ba0066d294c7ad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!4 &1325140537
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1325140534}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 678.49677, y: 371.5, z: -0.03579712}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 7
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!224 &1518202091 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 224542371961636930, guid: 1b4ab808e55c8427bafcaa8c75671ff0, type: 3}
@@ -1814,60 +1702,17 @@ LightingSettings:
   m_PVRFilteringAtrousPositionSigmaIndirect: 2
   m_PVRFilteringAtrousPositionSigmaAO: 1
   m_PVRTiledBaking: 0
---- !u!1 &1821011952
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1821011954}
-  - component: {fileID: 1821011953}
-  m_Layer: 0
-  m_Name: MoralisSetup
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1821011953
+--- !u!114 &1821011953 stripped
 MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 7421908706633609938, guid: 946fa0374448549c198f33c4141fcf33, type: 3}
+  m_PrefabInstance: {fileID: 7421908705904172323}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1821011952}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 411f905c051c23f4fb5890879a506219, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MoralisServerURI: https://hvt18wpki6ax.usemoralis.com:2053/server
-  MoralisApplicationId: AmLXP6UNoNiPxxMglVAQxhxOTnhzpi7oSpADHOja
-  ApplicationName: Moralis Boilerplate
-  Version: 1.0.0
-  ApplicationDescription: This application provdies an example of how to you Moralis
-    in a Unity 3D Game
-  ApplicationIcons:
-  - https://moralis.io/wp-content/uploads/2021/06/Powered-by-Moralis-Badge-Black.svg
-  ApplicationUrl: https://www.moralis.io
-  walletConnect: {fileID: 1325140535}
---- !u!4 &1821011954
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1821011952}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 678.49677, y: 371.5, z: -0.03579712}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 6
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1853045949
 GameObject:
   m_ObjectHideFlags: 0
@@ -2398,3 +2243,221 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f039b38886b2c4056adfcc1963267652, type: 3}
+--- !u!1001 &7421908705904172323
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 7421908706633609937, guid: 946fa0374448549c198f33c4141fcf33, type: 3}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7421908706633609937, guid: 946fa0374448549c198f33c4141fcf33, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 678.49677
+      objectReference: {fileID: 0}
+    - target: {fileID: 7421908706633609937, guid: 946fa0374448549c198f33c4141fcf33, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 371.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7421908706633609937, guid: 946fa0374448549c198f33c4141fcf33, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.03579712
+      objectReference: {fileID: 0}
+    - target: {fileID: 7421908706633609937, guid: 946fa0374448549c198f33c4141fcf33, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7421908706633609937, guid: 946fa0374448549c198f33c4141fcf33, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7421908706633609937, guid: 946fa0374448549c198f33c4141fcf33, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7421908706633609937, guid: 946fa0374448549c198f33c4141fcf33, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7421908706633609937, guid: 946fa0374448549c198f33c4141fcf33, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7421908706633609937, guid: 946fa0374448549c198f33c4141fcf33, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7421908706633609937, guid: 946fa0374448549c198f33c4141fcf33, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7421908706633609938, guid: 946fa0374448549c198f33c4141fcf33, type: 3}
+      propertyPath: walletConnect
+      value: 
+      objectReference: {fileID: 1325140535}
+    - target: {fileID: 7421908706633609938, guid: 946fa0374448549c198f33c4141fcf33, type: 3}
+      propertyPath: ApplicationUrl
+      value: https://metanox.xyz
+      objectReference: {fileID: 0}
+    - target: {fileID: 7421908706633609938, guid: 946fa0374448549c198f33c4141fcf33, type: 3}
+      propertyPath: ApplicationName
+      value: MetaNox
+      objectReference: {fileID: 0}
+    - target: {fileID: 7421908706633609938, guid: 946fa0374448549c198f33c4141fcf33, type: 3}
+      propertyPath: ApplicationDescription
+      value: MetaNox - Strategy Based Web3 Game
+      objectReference: {fileID: 0}
+    - target: {fileID: 7421908706633609938, guid: 946fa0374448549c198f33c4141fcf33, type: 3}
+      propertyPath: ApplicationIcons.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7421908706633609938, guid: 946fa0374448549c198f33c4141fcf33, type: 3}
+      propertyPath: ApplicationIcons.Array.data[0]
+      value: https://cdn.discordapp.com/attachments/891060757033263189/950230989781745724/barn.png
+      objectReference: {fileID: 0}
+    - target: {fileID: 7421908706633609938, guid: 946fa0374448549c198f33c4141fcf33, type: 3}
+      propertyPath: ApplicationIcons.Array.data[1]
+      value: https://gateway.pinata.cloud/ipfs/QmXtEABiyPHdHR2GMDyNzABTMcFFHtSXbqf2cSed453MFy
+      objectReference: {fileID: 0}
+    - target: {fileID: 7421908706633609939, guid: 946fa0374448549c198f33c4141fcf33, type: 3}
+      propertyPath: m_Name
+      value: MoralisSetup
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 946fa0374448549c198f33c4141fcf33, type: 3}
+--- !u!1001 &8117274318908656867
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 8117274317987743444, guid: ac2ce9a0f9c8149e1a03239fcef27ac0, type: 3}
+      propertyPath: AppData.Name
+      value: MetaNox
+      objectReference: {fileID: 0}
+    - target: {fileID: 8117274317987743444, guid: ac2ce9a0f9c8149e1a03239fcef27ac0, type: 3}
+      propertyPath: AppData.Description
+      value: MetaNox - Strategy Game which runs on web3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8117274317987743444, guid: ac2ce9a0f9c8149e1a03239fcef27ac0, type: 3}
+      propertyPath: AppData.Icons.Array.data[0]
+      value: '"https://cdn.discordapp.com/attachments/891060757033263189/950230989781745724/barn.png"'
+      objectReference: {fileID: 0}
+    - target: {fileID: 8117274317987743444, guid: ac2ce9a0f9c8149e1a03239fcef27ac0, type: 3}
+      propertyPath: ConnectedEvent.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8117274317987743444, guid: ac2ce9a0f9c8149e1a03239fcef27ac0, type: 3}
+      propertyPath: NewSessionConnected.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8117274317987743444, guid: ac2ce9a0f9c8149e1a03239fcef27ac0, type: 3}
+      propertyPath: ConnectedEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8117274317987743444, guid: ac2ce9a0f9c8149e1a03239fcef27ac0, type: 3}
+      propertyPath: ConnectedEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 383018949}
+    - target: {fileID: 8117274317987743444, guid: ac2ce9a0f9c8149e1a03239fcef27ac0, type: 3}
+      propertyPath: NewSessionConnected.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8117274317987743444, guid: ac2ce9a0f9c8149e1a03239fcef27ac0, type: 3}
+      propertyPath: ConnectedEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8117274317987743444, guid: ac2ce9a0f9c8149e1a03239fcef27ac0, type: 3}
+      propertyPath: NewSessionConnected.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 383018956}
+    - target: {fileID: 8117274317987743444, guid: ac2ce9a0f9c8149e1a03239fcef27ac0, type: 3}
+      propertyPath: ConnectedEventSession.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 383018956}
+    - target: {fileID: 8117274317987743444, guid: ac2ce9a0f9c8149e1a03239fcef27ac0, type: 3}
+      propertyPath: NewSessionConnected.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8117274317987743444, guid: ac2ce9a0f9c8149e1a03239fcef27ac0, type: 3}
+      propertyPath: NewSessionConnected.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: WalletConnectSessionEstablished
+      objectReference: {fileID: 0}
+    - target: {fileID: 8117274317987743444, guid: ac2ce9a0f9c8149e1a03239fcef27ac0, type: 3}
+      propertyPath: ConnectedEventSession.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: WalletConnectHandler
+      objectReference: {fileID: 0}
+    - target: {fileID: 8117274317987743444, guid: ac2ce9a0f9c8149e1a03239fcef27ac0, type: 3}
+      propertyPath: ConnectedEvent.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8117274317987743444, guid: ac2ce9a0f9c8149e1a03239fcef27ac0, type: 3}
+      propertyPath: NewSessionConnected.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: SignUpPanel, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 8117274317987743444, guid: ac2ce9a0f9c8149e1a03239fcef27ac0, type: 3}
+      propertyPath: ConnectedEventSession.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: SignUpPanel, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 8117274317987743444, guid: ac2ce9a0f9c8149e1a03239fcef27ac0, type: 3}
+      propertyPath: ConnectedEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8117274317987743444, guid: ac2ce9a0f9c8149e1a03239fcef27ac0, type: 3}
+      propertyPath: NewSessionConnected.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 8117274317987743445, guid: ac2ce9a0f9c8149e1a03239fcef27ac0, type: 3}
+      propertyPath: m_Name
+      value: WalletConnect
+      objectReference: {fileID: 0}
+    - target: {fileID: 8117274317987743450, guid: ac2ce9a0f9c8149e1a03239fcef27ac0, type: 3}
+      propertyPath: m_RootOrder
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 8117274317987743450, guid: ac2ce9a0f9c8149e1a03239fcef27ac0, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 678.49677
+      objectReference: {fileID: 0}
+    - target: {fileID: 8117274317987743450, guid: ac2ce9a0f9c8149e1a03239fcef27ac0, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 371.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8117274317987743450, guid: ac2ce9a0f9c8149e1a03239fcef27ac0, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.03579712
+      objectReference: {fileID: 0}
+    - target: {fileID: 8117274317987743450, guid: ac2ce9a0f9c8149e1a03239fcef27ac0, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8117274317987743450, guid: ac2ce9a0f9c8149e1a03239fcef27ac0, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8117274317987743450, guid: ac2ce9a0f9c8149e1a03239fcef27ac0, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8117274317987743450, guid: ac2ce9a0f9c8149e1a03239fcef27ac0, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8117274317987743450, guid: ac2ce9a0f9c8149e1a03239fcef27ac0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8117274317987743450, guid: ac2ce9a0f9c8149e1a03239fcef27ac0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8117274317987743450, guid: ac2ce9a0f9c8149e1a03239fcef27ac0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: ac2ce9a0f9c8149e1a03239fcef27ac0, type: 3}
