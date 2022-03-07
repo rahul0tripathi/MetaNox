@@ -22,6 +22,7 @@ public class ItemData
     public int posZ;
 }
 
+
 [Serializable]
 public class SceneData
 {
@@ -84,6 +85,7 @@ public class Main : MonoBehaviour
 
     private void Awake()
     {
+        
         Screen.orientation = ScreenOrientation.LandscapeLeft;
         instance = this;
         Items.LoadItems();
