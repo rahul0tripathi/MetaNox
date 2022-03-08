@@ -1,2 +1,2 @@
-# loi-core
-land of infinity core game
+# Metanox
+Metanox core game
