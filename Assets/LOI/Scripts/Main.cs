@@ -153,12 +153,12 @@ public class Main : MonoBehaviour
             "{\"instanceId\":66682,\"itemId\":5341,\"posX\":31,\"posZ\":37}," +
             "{\"instanceId\":92946,\"itemId\":5341,\"posX\":27,\"posZ\":41},";
         //+
-        for (int i = 0; i < 45; i++)
-        {
+        //for (int i = 0; i < 45; i++)
+        //{
 
 
-            _defaultSceneData += "{\"instanceId\":11908,\"itemId\":7666,\"posX\":0,\"posZ\":" + (i).ToString() + "},";
-        }
+        //    _defaultSceneData += "{\"instanceId\":11908,\"itemId\":7666,\"posX\":0,\"posZ\":" + (i).ToString() + "},";
+        //}
         for (int i = 0; i < 45; i++)
         {
 

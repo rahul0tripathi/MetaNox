@@ -1,2 +1,2 @@
 # Metanox
-Metanox core game
+Metanox core game - 
