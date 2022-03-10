@@ -14,7 +14,8 @@ public class SignUpPanel : MonoBehaviour
     public WalletConnect walletConnect;
     public MoralisController moralisController;
     public GameObject qrMenu;
-   
+    public GameObject walletOverlay;
+    public ProfileHandler profile;
     async public void Start()
     {
         if (moralisController != null && moralisController)
@@ -76,7 +77,10 @@ public class SignUpPanel : MonoBehaviour
             Debug.Log($"User {user.username} logged in successfully. ");
             Main.instance.SetupContracts();
             Main.instance.LoadScene();
+            walletOverlay.SetActive(true);
+            profile.UpdateWalletAddress(user.ethAddress);
             qrMenu.SetActive(false);
+            
         }
         else
         {
