@@ -105,7 +105,7 @@ MonoBehaviour:
     destroyedSprites: a702000041030000
   - id: 1712
     name: Cannon
-    thumb: {fileID: 2800000, guid: 0cebb485fc10049249571e2831af9294, type: 3}
+    thumb: {fileID: 2800000, guid: ea4c6299033c343b5b6e9332f35b08ee, type: 3}
     gridSize: 3
     configuration:
       buildTime: 15

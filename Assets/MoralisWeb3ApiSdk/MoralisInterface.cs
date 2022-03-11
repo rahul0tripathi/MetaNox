@@ -513,7 +513,7 @@ namespace MoralisWeb3ApiSdk
             //    Debug.LogError(s);
             //})));
             //
-           Web3Client = new Web3(client.CreateProvider(new Uri("https://rpc-mumbai.maticvigil.com")));
+           Web3Client = new Web3(client.CreateProvider(new Uri("https://rpc-mumbai.maticvigil.com/v1/6513fb247c676d70f3d33445ec007f80a71411cc")));
         }
 
         /// <summary>

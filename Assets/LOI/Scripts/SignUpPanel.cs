@@ -44,6 +44,7 @@ public class SignUpPanel : MonoBehaviour
     }
     public async void WalletConnectHandler(WCSessionData data)
     {
+        MoralisInterface.SetupWeb3();
         Debug.Log("Wallet connection received");
         string address = data.accounts[0].ToLower();
         string appId = MoralisInterface.GetClient().ApplicationId;
@@ -68,6 +69,9 @@ public class SignUpPanel : MonoBehaviour
         Dictionary<string, object> authData = new Dictionary<string, object> { { "id", address }, { "signature", response }, { "data", signMessage } };
 
         Debug.Log("Logging in user.");
+        Debug.Log(authData["data"]);
+        Debug.Log(authData["id"]);
+        Debug.Log(authData["signature"]);
 
         // Attempt to login user.
         Moralis.Platform.Objects.MoralisUser user = await MoralisInterface.LogInAsync(authData);
@@ -80,7 +84,6 @@ public class SignUpPanel : MonoBehaviour
             walletOverlay.SetActive(true);
             profile.UpdateWalletAddress(user.ethAddress);
             qrMenu.SetActive(false);
-            
         }
         else
         {

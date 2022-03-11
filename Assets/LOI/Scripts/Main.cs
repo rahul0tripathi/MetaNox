@@ -80,6 +80,7 @@ public class Main : MonoBehaviour
     public Material RenderQuadMaterial;
     public GameObject ItemsContainer;
     public NoxTokenContractHandler noxTokenHandler;
+    public ProfileHandler profile;
     private Dictionary<int, BaseItemScript> _itemInstances;
 
     private void Awake()
@@ -215,8 +216,16 @@ public class Main : MonoBehaviour
     async public void SetupContracts()
     {
         noxTokenHandler = new NoxTokenContractHandler();
-        _ = await noxTokenHandler.Init();
-        Debug.Log(await noxTokenHandler.GetTokenBalance());
+        var value = await noxTokenHandler.Init();
+        Debug.Log(value);
+        var v = await noxTokenHandler.GetTokenBalance();
+        profile.UpdateBalance(v.ToString() + " NOX"); 
+       
     }
-
+    async public void AddBal()
+    {
+        await noxTokenHandler.AddToken();
+        var v = await noxTokenHandler.GetTokenBalance();
+        profile.UpdateBalance(v.ToString() + " NOX");
+    }
 }

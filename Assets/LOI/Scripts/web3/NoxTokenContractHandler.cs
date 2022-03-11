@@ -19,9 +19,10 @@ public class NoxTokenContractHandler : MonoBehaviour
         {
 
             MoralisUser user = await MoralisInterface.GetUserAsync();
-            string address = user.authData["moralisEth"]["id"].ToString();
+             address = user.authData["moralisEth"]["id"].ToString();
             Debug.Log(MoralisInterface.Web3Client);
             NoxTokenContract = MoralisInterface.Web3Client.Eth.GetContractHandler(NoxTokenConstants.NoxTokenContractAddress);
+            initalized = true;
             return true;
         }
         else
@@ -30,19 +31,34 @@ public class NoxTokenContractHandler : MonoBehaviour
         }
 
     }
-    public async Task<BigInteger> GetTokenBalance()
+    public async Task<float> GetTokenBalance()
     {
         if (initalized)
         {
-            var balancesFunction = new BalancesFunction();
-            balancesFunction.ReturnValue1 = address;
-            var balancesFunctionReturn = await NoxTokenContract.QueryAsync<BalancesFunction, BigInteger>(balancesFunction);
-            return balancesFunctionReturn;
+            var balancesFunction = new BalanceOfFunction();
+
+            balancesFunction.Account = address;
+            var balancesFunctionReturn = await NoxTokenContract.QueryAsync<BalanceOfFunction, BigInteger>(balancesFunction);
+            return (float)System.Numerics.BigInteger.Divide(balancesFunctionReturn, 1000000000000000000);
+            
         }
         else
         {
-            return 0;
+            return 0.0000F;
         }
+    }
+    public async Task<bool> AddToken()
+    {
+        
+            Debug.Log("called");
+            var mintFn = new MintFunction();
+            mintFn.FromAddress = address;
+            var called = await NoxTokenContract.SendRequestAndWaitForReceiptAsync<MintFunction>(mintFn);
+            Debug.Log("here");
+            Debug.Log(called.TransactionHash);
+        return true;
+        
+       
     }
 }
 

@@ -7,11 +7,15 @@ public class ProfileHandler : MonoBehaviour
     const string imageUrl = "https://icotar.com/avatar/";
     public GameObject walletLabel;
     public GameObject profileImage;
+    public GameObject balanceLabel;
     public void UpdateWalletAddress(string address)
     {
 
         walletLabel.GetComponent<UnityEngine.UI.Text>().text = address;
         LoadProfile(address);
+    }
+    public void UpdateBalance(string value) {
+        balanceLabel.GetComponent<UnityEngine.UI.Text>().text = value;
     }
     // Start is called before the first frame update
     void Start()
