@@ -40,7 +40,7 @@ public class Build : MonoBehaviour
 
     }
     public void NewBuild() {
-        itemSelectd = 7;
+        itemSelectd = 6;
         main.BuildNewFn(itemSelectd, posX, posY);
         //return true;
     }

@@ -148,7 +148,7 @@ public class NoxTokenContractHandler : MonoBehaviour
 
         Debug.Log(JsonUtility.ToJson(itemList));
         //get Barrack
-        getAssetFn.Asset = await NoxTokenContract.QueryAsync<TOWERFunction, BigInteger>();
+        getAssetFn.Asset = await NoxTokenContract.QueryAsync<BARRACKFunction, BigInteger>();
         var barrackList = await NoxTokenContract.QueryAsync<GetAssetsFunction, List<string>>(getAssetFn);
         itemList.AddRange(BuildAssetMap(barrackList, BARRACK_ID, _GetUnusedInstanceId()));
         if (currentlyBuilding == getAssetFn.Asset)
