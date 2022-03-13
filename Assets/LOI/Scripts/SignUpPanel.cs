@@ -75,12 +75,12 @@ public class SignUpPanel : MonoBehaviour
 
         // Attempt to login user.
         Moralis.Platform.Objects.MoralisUser user = await MoralisInterface.LogInAsync(authData);
-        
+
         if (user != null)
         {
             Debug.Log($"User {user.username} logged in successfully. ");
             Main.instance.SetupContracts();
-            Main.instance.LoadScene();
+            //Main.instance.LoadScene();
             walletOverlay.SetActive(true);
             profile.UpdateWalletAddress(user.ethAddress);
             qrMenu.SetActive(false);

@@ -12,12 +12,16 @@ public class Main : MonoBehaviour
     public const int nodeWidth = 44;
     public const int nodeHeight = 44;
     public GameObject RenderQuad;
+    public GameObject InfoWindow;
     public Material RenderQuadMaterial;
     public GameObject ItemsContainer;
+    public GameObject BuildMenu;
     public NoxTokenContractHandler noxTokenHandler;
     public ProfileHandler profile;
     private Dictionary<int, BaseItemScript> _itemInstances;
     public BaseLandScript baseland;
+    private static int CAMP = 2728;
+    public GameObject buildNew;
     private void Awake()
     {
         baseland = new BaseLandScript();
@@ -25,18 +29,22 @@ public class Main : MonoBehaviour
         instance = this;
         Items.LoadItems();
         Sprites.LoadSprites();
-        //LoadScene();
     }
-
-    // Update is called once per frame
     private void Update()
     {
     }
 
     async public void LoadScene()
     {
+        foreach (var comp in ItemsContainer.GetComponents<Component>())
+        {
+            if (!(comp is Transform))
+            {
+                Destroy(comp);
+            }
+        }
         var sceneData = await baseland.getBaseLandConfig();
-        var cannons = await noxTokenHandler.GetCannons();
+        var cannons = await noxTokenHandler.GetLandItems();
         Debug.Log(JsonUtility.ToJson(cannons));
         sceneData.items.AddRange(cannons);
         foreach (var itemData in sceneData.items)
@@ -52,7 +60,6 @@ public class Main : MonoBehaviour
 
         var instance = Utilities.CreateInstance(BaseItem, ItemsContainer, true)
             .GetComponent<BaseItemScript>();
-
         if (instanceId == -1) instanceId = _GetUnusedInstanceId();
 
         instance.instanceId = instanceId;
@@ -73,13 +80,28 @@ public class Main : MonoBehaviour
         var value = await noxTokenHandler.Init();
         Debug.Log(value);
         var v = await noxTokenHandler.GetPowerupTokenBalance();
-        profile.UpdateBalance(v.ToString() + " NOX POWER"); 
-       
+        Debug.Log(v);
+        profile.UpdateBalance(v.ToString() + " NOX");
+        LoadScene();
+
     }
-    async public void AddBal()
+    async public void BuildNewFn(int asset, int x, int y)
     {
-        //await noxTokenHandler.AddToken();
-        //var v = await noxTokenHandler.GetTokenBalance();
-        //profile.UpdateBalance(v.ToString() + " NOX");
+
+        var build = await noxTokenHandler.Build(asset, x.ToString(), y.ToString());
+        AddItem(CAMP, _GetUnusedInstanceId(), x, y, true, true);
+
+    }
+    public void openBuild()
+    {
+        BuildMenu.SetActive(true);
+    }
+    public void closeBuild()
+    {
+        BuildMenu.SetActive(false);
+    }
+    public void ReloadScene()
+    {
+        LoadScene();
     }
 }
